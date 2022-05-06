@@ -48,3 +48,11 @@ server {
                   }
     }
 ```
+将 http 重定向 https。
+```
+server {
+    listen       80;
+    server_name  hack520.com www.hack520.com;
+    return 301 https://$server_name$request_uri;
+}
+```
